@@ -26,7 +26,8 @@
 2) Дождаться ревью от коллег (лучше сообщить об этом в чате).
 3) Получить аппрув и влить ветку в develop.
 
-Как только все feature-ветки будут влиты, develop вливается в production.
+Как только все feature-ветки будут влиты, [develop](https://github.com/allitov/simple-computer/tree/develop) 
+вливается в [production](https://github.com/allitov/simple-computer/tree/production).
 
 ## Sprint retro
 Каждую субботу в 16:00.
