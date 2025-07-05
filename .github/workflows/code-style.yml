@@ -3,6 +3,7 @@ name: Code Style Check
 on:
   pull_request:
     branches:
+      - production
       - develop
 
 jobs:
