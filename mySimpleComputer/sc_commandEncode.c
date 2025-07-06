@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
+#include "./sc_constants.h"
 
 int sc_commandEncode(const int sign, const int command, const int operand, int* value)
 {
-    if (sign != 0)
+    if (sign == MINUS)
     {
-        printf("Command must start with 0\n");
-        return -1;
+        printf("Command must start with %X\n", PLUS);
+        return ERROR;
     }
-    if (command < 0x0 || command > 0x7f)
+    if (sc_commandValidate(command) == ERROR)
     {
-        printf("Command value must be from 0x0 to 0x7f\n");
-        return -1;
+        printf("Invalid command\n");
+        return ERROR;
     }
-    if (operand < 0x0 || operand > 0x7f)
+    if (operand < OPERAND_MIN || operand > OPERAND_MAX)
     {
-        printf("Operand value must be from 0x0 to 0x7f\n");
-        return -1;
+        printf("Operand value must be from %X to %X\n", OPERAND_MIN, OPERAND_MAX);
+        return ERROR;
     }
 
-    *value = sign << 15 | command << 7 | operand;
+    *value = sign << SIGN_POS | command << COMMAND_POS | operand << OPERAND_POS;
 
-    return 0;
+    return OK;
 }

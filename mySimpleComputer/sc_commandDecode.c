@@ -1,26 +1,27 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
+#include "./sc_constants.h"
 
 int sc_commandDecode(const int value, int* sign, int* command, int* operand)
 {
-    int s = value & 0x1 << 15;
-    int c = value & 0x7f << 7;
-    int o = value & 0x7f;
+    const int v_sign = value & MINUS << SIGN_POS;
+    const int v_command = value & COMMAND_MAX << COMMAND_POS;
+    const int v_operand = value & OPERAND_MAX << OPERAND_POS;
 
-    if (s != 0)
+    if (v_sign == MINUS)
     {
-        printf("Sign must be 0x0\n");
-        return -1;
+        printf("Sign must be %X\n", PLUS);
+        return ERROR;
     }
-    if (sc_commandValidate(c) != 0)
+    if (sc_commandValidate(v_command) == ERROR)
     {
-        printf("Command must be 0x0\n");
-        return -1;
+        printf("Invalid command\n");
+        return ERROR;
     }
 
-    *sign = s;
-    *command = c;
-    *operand = o;
+    *sign = v_sign;
+    *command = v_command;
+    *operand = v_operand;
 
-    return 0;
+    return OK;
 }

@@ -1,15 +1,26 @@
-#include <stdio.h>
 #include "../include/mySimpleComputer.h"
+#include "./sc_commands.h"
 
 int sc_commandValidate(const int command)
 {
-    if (command < 0x0 || command > 0x7f)
+    switch (command)
     {
-        printf("Command value must be from 0x0 to 0x7f\n");
+    case NOP:
+    case CPUINFO:
+    case READ:
+    case WRITE:
+    case LOAD:
+    case STORE:
+    case ADD:
+    case SUB:
+    case DIVIDE:
+    case MUL:
+    case JUMP:
+    case JNEG:
+    case JZ:
+    case HALT:
+        return 0;
+    default:
         return -1;
     }
-
-    // TODO: сделать проверку на конкретную команду
-
-    return 0;
 }

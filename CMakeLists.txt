@@ -8,4 +8,6 @@ add_executable(simple_computer main.c
         mySimpleComputer/sc_commandDecode.c
         mySimpleComputer/sc_commandValidate.c
         include/mySimpleComputer.h
-        mySimpleComputer/commands.h)
+        mySimpleComputer/sc_commands.h
+        mySimpleComputer/sc_constants.h
+        console/pr01.c)
