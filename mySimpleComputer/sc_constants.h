@@ -13,11 +13,11 @@
 // command
 #define COMMAND_MIN 0x0
 #define COMMAND_MAX 0x7F
-#define COMMAND_POS 7
+#define COMMAND_POS 6
 
 // sign
 #define PLUS        0x0
 #define MINUS       0x1
-#define SIGN_POS    15
+#define SIGN_POS    14
 
 #endif //SC_CONSTANTS_H

@@ -1,5 +1,6 @@
 #include "../include/mySimpleComputer.h"
-#include "./sc_commands.h"
+#include "./sc_constants.h"
+#include "sc_commands.h"
 
 int sc_commandValidate(const int command)
 {
@@ -19,8 +20,8 @@ int sc_commandValidate(const int command)
     case JNEG:
     case JZ:
     case HALT:
-        return 0;
+        return OK;
     default:
-        return -1;
+        return ERROR;
     }
 }
