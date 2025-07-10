@@ -4,11 +4,15 @@
 void printBin(const int value)
 {
     printf("bin: ");
-    for (int i = 14; i >= 0; i--) {
+    for (int i = 14; i >= 0; i--)
+    {
         const int mask = 0x1 << i;
-        if ((value & mask) != 0) {
+        if ((value & mask) != 0)
+        {
             printf("1");
-        } else {
+        }
+        else
+        {
             printf("0");
         }
     }

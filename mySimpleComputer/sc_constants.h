@@ -20,4 +20,4 @@
 #define MINUS       0x1
 #define SIGN_POS    14
 
-#endif //SC_CONSTANTS_H
+#endif // SC_CONSTANTS_H
