@@ -4,18 +4,19 @@
 
 int sc_commandDecode(const int value, int* sign, int* command, int* operand)
 {
-    const int v_sign = value & MINUS << SIGN_POS;
-    const int v_command = value & COMMAND_MAX << COMMAND_POS;
-    const int v_operand = value & OPERAND_MAX << OPERAND_POS;
-
-    if (v_sign == MINUS)
+    if (value < 0 || value > 0x3FFF)
     {
-        printf("Sign must be %X\n", PLUS);
+        printf("Invalid command value\n");
         return ERROR;
     }
+
+    const int v_sign = value & MINUS << SIGN_POS;
+    const int v_command = (value & COMMAND_MAX << COMMAND_POS) >> COMMAND_POS;
+    const int v_operand = value & OPERAND_MAX << OPERAND_POS;
+
     if (sc_commandValidate(v_command) == ERROR)
     {
-        printf("Invalid command\n");
+        printf("Nonexistent command\n");
         return ERROR;
     }
 

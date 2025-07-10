@@ -13,7 +13,7 @@
 // command
 #define COMMAND_MIN 0x0
 #define COMMAND_MAX 0x7F
-#define COMMAND_POS 6
+#define COMMAND_POS 8
 
 // sign
 #define PLUS        0x0
