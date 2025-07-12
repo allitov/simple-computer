@@ -7,6 +7,11 @@ add_executable(simple_computer
         mySimpleComputer/sc_commandEncode.c
         mySimpleComputer/sc_commandDecode.c
         mySimpleComputer/sc_commandValidate.c
+        mySimpleComputer/sc_memorySet.c
+        mySimpleComputer/sc_memorySave.c
+        mySimpleComputer/sc_memoryLoad.c
+        mySimpleComputer/sc_memoryGet.c
+        mySimpleComputer/sc_memoryInit.c
         include/mySimpleComputer.h
         mySimpleComputer/sc_commands.h
         mySimpleComputer/sc_constants.h
@@ -16,4 +21,7 @@ add_executable(simple_computer
         console/printDec.c
         console/printBin.c
         console/printOct.c
-        console/printHex.c)
+        console/printHex.c
+        console/printCell.c
+        mySimpleComputer/sc_variables.h
+        mySimpleComputer/sc_variables.c)

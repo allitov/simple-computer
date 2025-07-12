@@ -20,4 +20,11 @@
 #define MINUS 0x1
 #define SIGN_POS 14
 
+// RAM
+#define RAM_SIZE 128
+#define RAM_MAX_ADDRESS 0x007F
+#define RAM_MIN_ADDRESS 0x0000
+#define RAM_MAX_VALUE 0x7FFF
+#define RAM_MIN_VALUE 0x0000
+
 #endif // SC_CONSTANTS_H
