@@ -3,7 +3,7 @@
 #include "./sc_constants.h"
 #include "sc_variables.h"
 
-int sc_memoryLoad (char * filename)
+int sc_memoryLoad(char *filename)
 {
     if (filename == NULL)
     {

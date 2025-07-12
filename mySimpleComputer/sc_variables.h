@@ -1,3 +1,6 @@
-#include "./sc_constants.h"
+#ifndef SC_VARIABLES_H
+#define SC_VARIABLES_H
 
-int RAM[RAM_SIZE];
+extern int RAM[];
+
+#endif // SC_VARIABLES_H

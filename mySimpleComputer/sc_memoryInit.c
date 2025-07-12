@@ -8,5 +8,4 @@ void sc_memoryInit()
     {
         RAM[i] = 0;
     }
-
 }

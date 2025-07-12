@@ -4,7 +4,7 @@
 
 int sc_memorySet (int address, int value)
 {
-    if (address < 0 || address > 127 || value > 32767 || value < 0) //TODO: bliatstvo
+    if (address < RAM_MIN_ADDRESS || address > RAM_MAX_ADDRESS || value > RAM_MAX_VALUE || value < RAM_MIN_VALUE)
     {
         return ERROR;
     }

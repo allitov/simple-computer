@@ -9,7 +9,7 @@ int sc_memorySave(char *filename)
     {
         return ERROR;
     }
-    //создали файлик
+    // создали файлик
     FILE *file = fopen(filename, "wb");
 
     if (file == NULL)
