@@ -9,21 +9,21 @@ int sc_memorySave(char *filename)
     {
         return ERROR;
     }
-    // создали файлик
+
     FILE *file = fopen(filename, "wb");
 
     if (file == NULL)
     {
         return ERROR;
     }
-    //
+
     size_t res = fwrite(RAM, sizeof(int), RAM_SIZE, file);
 
     fclose(file);
 
     if (res != RAM_SIZE)
     {
-        return -1;
+        return ERROR;
     }
-    return 0;
+    return OK;
 }

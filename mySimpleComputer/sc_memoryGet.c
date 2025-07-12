@@ -8,9 +8,6 @@ int sc_memoryGet(int address, int* value)
     {
         return ERROR;
     }
-    else
-    {
-        *value = RAM[address];
-        return OK;
-    }
+    *value = RAM[address];
+    return OK;
 }

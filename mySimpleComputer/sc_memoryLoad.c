@@ -7,14 +7,14 @@ int sc_memoryLoad(char *filename)
 {
     if (filename == NULL)
     {
-        return -1;
+        return ERROR;
     }
 
     FILE *file = fopen(filename, "rb");
 
     if (file == NULL)
     {
-        return -1;
+        return ERROR;
     }
 
     size_t res = fread(RAM, sizeof(int), RAM_SIZE, file);
@@ -22,7 +22,7 @@ int sc_memoryLoad(char *filename)
     fclose(file);
     if (res != RAM_SIZE)
     {
-        return -1;
+        return ERROR;
     }
-    return 0;
+    return OK;
 }
