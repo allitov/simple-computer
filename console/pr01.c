@@ -60,12 +60,12 @@ int main(void)
     printf("func returns: %d\n", a);
     printFlags();
 
-    printf("=== setting registerflags with 1 ===\n");
+    printf("=== setting registerFlags with 1 ===\n");
     sc_regSet(FLAG_OPERATION_OVERFLOW, 1);
     sc_regSet(FLAG_DIVISION_BY_ZERO, 1);
     sc_regSet(FLAG_MEMORY_OVERFLOW, 1);
-    sc_regSet(FLAG_IGNORE_CLOCK, 1);
-    a = sc_regSet(FLAG_INVALID_COMMAND, 1);
+    sc_regSet(FLAG_INVALID_COMMAND, 1);
+    a = sc_regSet(FLAG_IGNORE_CLOCK, 1);
     printf("func returns: %d\n", a);
     printFlags();
 
@@ -80,15 +80,15 @@ int main(void)
 
     printf("=== getting flags values ===\n");
     sc_regGet(FLAG_OPERATION_OVERFLOW, &value);
-    printf("%d\n", value & (1 << 4));
+    printf("%d\n", value);
     sc_regGet(FLAG_DIVISION_BY_ZERO, &value);
-    printf("%d\n", value << 3);
+    printf("%d\n", value);
     sc_regGet(FLAG_MEMORY_OVERFLOW, &value);
-    printf("%d\n", value << 2);
-    sc_regGet(FLAG_IGNORE_CLOCK, &value);
-    printf("%d\n", value << 1);
-    a = sc_regGet(FLAG_INVALID_COMMAND, &value);
-    printf("%d\n", value << 0);
+    printf("%d\n", value);
+    sc_regGet(FLAG_INVALID_COMMAND, &value);
+    printf("%d\n", value);
+    a = sc_regGet(FLAG_IGNORE_CLOCK, &value);
+    printf("%d\n", value);
     printf("func returns: %d\n", a);
     printFlags();
 
