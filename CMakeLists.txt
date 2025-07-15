@@ -24,4 +24,8 @@ add_executable(simple_computer
         console/printHex.c
         console/printCell.c
         mySimpleComputer/sc_variables.h
-        mySimpleComputer/sc_variables.c)
+        mySimpleComputer/sc_variables.c
+        mySimpleComputer/sc_regInit.c
+        mySimpleComputer/sc_regSet.c
+        console/printFlags.c
+        mySimpleComputer/sc_regGet.c)

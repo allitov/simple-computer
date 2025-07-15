@@ -14,4 +14,10 @@ int sc_memorySave(char* filename);
 int sc_memoryLoad(char* filename);
 void printCell(int address);
 
+// Registers
+int sc_regInit(void);
+int sc_regSet(int register, int value);
+int sc_regGet(int registerFlag, int *value);
+
+
 #endif // MYSIMPLECOMPUTER_H

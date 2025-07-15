@@ -7,5 +7,6 @@ void printDec(int value);
 void printBin(int value);
 void printOct(int value);
 void printHex(int value);
+void printFlags(void);
 
 #endif // CONSOLE_H
