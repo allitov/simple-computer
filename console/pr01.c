@@ -45,13 +45,13 @@ int main(void)
     result = sc_commandDecode(0x3FFF, &sign, &command, &operand);
     printf("result = %d; sign = %d; command = %X; operand = %X\n\n", result, sign, command, operand);
 
-    printf("!== Register funcs check ==!\n");
+    printf("\n!== Register funcs check ==!\n");
     int a = sc_regInit();
-    printf("=== initializing register ===\n");
+    printf("\n=== initializing register ===\n");
     printf("func returns: %d; 'flags' variable value: %d\n", a, flags);
     printFlags();
 
-    printf("=== setting registerflags with 0 ===\n");
+    printf("\n=== setting registerflags with 0 ===\n");
     a = sc_regSet(FLAG_OPERATION_OVERFLOW, 0);
     sc_regSet(FLAG_DIVISION_BY_ZERO, 0);
     sc_regSet(FLAG_MEMORY_OVERFLOW, 0);
@@ -60,7 +60,7 @@ int main(void)
     printf("func returns: %d\n", a);
     printFlags();
 
-    printf("=== setting registerFlags with 1 ===\n");
+    printf("\n=== setting registerFlags with 1 ===\n");
     sc_regSet(FLAG_OPERATION_OVERFLOW, 1);
     sc_regSet(FLAG_DIVISION_BY_ZERO, 1);
     sc_regSet(FLAG_MEMORY_OVERFLOW, 1);
@@ -69,7 +69,7 @@ int main(void)
     printf("func returns: %d\n", a);
     printFlags();
 
-    printf("=== setting with invalid flags ===\n");
+    printf("\n=== setting with invalid flags ===\n");
     sc_regSet(0x10, 1);
     sc_regSet(0x6, 1);
     sc_regSet(17, 1);
@@ -78,7 +78,7 @@ int main(void)
     printf("func returns: %d\n", a);
     printFlags();
 
-    printf("=== getting flags values ===\n");
+    printf("\n=== getting flags values ===\n");
     sc_regGet(FLAG_OPERATION_OVERFLOW, &value);
     printf("%d\n", value);
     sc_regGet(FLAG_DIVISION_BY_ZERO, &value);
@@ -91,6 +91,74 @@ int main(void)
     printf("%d\n", value);
     printf("func returns: %d\n", a);
     printFlags();
+
+    printf("\n!=== Accumulator funcs check ===!\n");
+    printf("\n=== initializing accumulator ===\n");
+    sc_accumulatorInit();
+    printf("Accumulator: %X\n", accumulator);
+
+    printf("\n=== setting accumulator ===\n");
+    printf("\n=== setting accumulator with positive value ===\n");
+    a = sc_accumulatorSet(0x3fff);
+    printf("func returns: %d\n", a);
+    printAccumulator();
+    a = sc_accumulatorSet(0x1d3);
+    printf("func returns: %d\n", a);
+    printAccumulator();
+    printf("\n=== setting accumulator with negative value ===\n");
+    a = sc_accumulatorSet(0x403d);
+    printf("func returns: %d\n", a);
+    printAccumulator();
+    a = sc_accumulatorSet(0x7fff);
+    printf("func returns: %d\n", a);
+    printAccumulator();
+    printf("\n=== setting accumulator with invalid value ===\n");
+    a = sc_accumulatorSet(0x8000);
+    printf("func returns: %d\n", a);
+    printAccumulator();
+
+    printf("\n=== getting accumulator value ===\n");
+    a = sc_accumulatorGet(&value);
+    printf("func returns: %d\nvalue(dec): %d\n", a, value);
+    printAccumulator();
+    printf("\n=== getting accumulator value with NULL ptr ===\n");
+    a = sc_accumulatorGet(NULL);
+    printf("func returns: %d\nvalue(dec): %d\n", a, value);
+    printAccumulator();
+
+    printf("\n=== ICounter funcs check ===\n");
+    printf("\n=== initializing icounter ===\n");
+    sc_icounterInit();
+    printf("Icounter: %X\n", icounter);
+
+    printf("\n=== setting icounter ===\n");
+    printf("\n=== setting icounter with positive value ===\n");
+    a = sc_icounterSet(0x3fff);
+    printf("func returns: %d\n", a);
+    printCounters();
+    a = sc_icounterSet(0x1d3);
+    printf("func returns: %d\n", a);
+    printCounters();
+    printf("\n=== setting icounter with negative value ===\n");
+    a = sc_icounterSet(0x403d);
+    printf("func returns: %d\n", a);
+    printCounters();
+    a = sc_icounterSet(0x7fff);
+    printf("func returns: %d\n", a);
+    printCounters();
+    printf("\n=== setting icounter with invalid value ===\n");
+    a = sc_icounterSet(0x8000);
+    printf("func returns: %d\n", a);
+    printCounters();
+
+    printf("\n=== getting icounter value ===\n");
+    a = sc_icounterGet(&value);
+    printf("func returns: %d\nvalue(dec): %d\n", a, value);
+    printCounters();
+    printf("\n=== getting icounter value with NULL ptr ===\n");
+    a = sc_icounterGet(NULL);
+    printf("func returns: %d\nvalue(dec): %d\n", a, value);
+    printCounters();
 
     return 0;
 }

@@ -28,4 +28,12 @@ add_executable(simple_computer
         mySimpleComputer/sc_regInit.c
         mySimpleComputer/sc_regSet.c
         console/printFlags.c
-        mySimpleComputer/sc_regGet.c)
+        mySimpleComputer/sc_regGet.c
+        mySimpleComputer/sc_accumulatorInit.c
+        mySimpleComputer/sc_accumulatorGet.c
+        console/printAccumulator.c
+        mySimpleComputer/sc_accumulatorSet.c
+        mySimpleComputer/sc_icounterInit.c
+        mySimpleComputer/sc_icounterSet.c
+        mySimpleComputer/sc_icounterGet.c
+        console/printCounters.c)
