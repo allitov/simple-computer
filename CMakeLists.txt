@@ -24,4 +24,10 @@ add_executable(simple_computer
         console/printHex.c
         console/printCell.c
         mySimpleComputer/sc_variables.h
-        mySimpleComputer/sc_variables.c)
+        mySimpleComputer/sc_variables.c
+        myTerm/mt_getscreensize.c
+        include/myTerm.h
+        include/Enum.h
+        myTerm/mt_variables.c
+        myTerm/mt_variables.h
+)
