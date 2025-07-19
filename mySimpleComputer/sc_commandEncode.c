@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../include/constants.h"
 #include "../include/mySimpleComputer.h"
 #include "./sc_constants.h"
 

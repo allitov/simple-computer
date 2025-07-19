@@ -1,10 +1,6 @@
 #ifndef SC_CONSTANTS_H
 #define SC_CONSTANTS_H
 
-// result codes
-#define OK 0
-#define ERROR -1
-
 // operand
 #define OPERAND_MIN 0x0
 #define OPERAND_MAX 0x7F

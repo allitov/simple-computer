@@ -36,4 +36,7 @@ add_executable(simple_computer
         mySimpleComputer/sc_icounterInit.c
         mySimpleComputer/sc_icounterSet.c
         mySimpleComputer/sc_icounterGet.c
-        console/printCounters.c)
+        console/printCounters.c
+        include/myTerm.h
+        myTerm/mt_clrscr.c
+        include/constants.h)

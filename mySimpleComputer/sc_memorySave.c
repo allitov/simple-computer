@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include "../include/constants.h"
 #include "../include/mySimpleComputer.h"
 #include "./sc_constants.h"
-#include "sc_variables.h"
+#include "./sc_variables.h"
 
-int sc_memorySave(char *filename)
+int sc_memorySave(const char *filename)
 {
     if (filename == NULL)
     {
@@ -17,7 +18,7 @@ int sc_memorySave(char *filename)
         return ERROR;
     }
 
-    size_t res = fwrite(RAM, sizeof(int), RAM_SIZE, file);
+    const size_t res = fwrite(RAM, sizeof(int), RAM_SIZE, file);
 
     fclose(file);
 
@@ -25,5 +26,6 @@ int sc_memorySave(char *filename)
     {
         return ERROR;
     }
+
     return OK;
 }
