@@ -4,7 +4,6 @@
 // result codes
 #define OK 0
 #define ERROR -1
-#define SUCCESS 0
 
 // operand
 #define OPERAND_MIN 0x0

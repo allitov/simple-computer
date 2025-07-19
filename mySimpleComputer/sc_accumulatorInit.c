@@ -6,5 +6,5 @@ int sc_accumulatorInit(void)
 {
     accumulator = 0;
 
-    return SUCCESS;
+    return OK;
 }

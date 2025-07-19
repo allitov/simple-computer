@@ -18,5 +18,5 @@ int sc_regGet(int registerFlag, int *value)
     // 1 1 1 1 1
     // 0 0 0 1 0
     // 0 0 1 0 0
-    return SUCCESS;
+    return OK;
 }

@@ -6,5 +6,5 @@ int sc_icounterInit(void)
 {
     icounter = 0;
 
-    return SUCCESS;
+    return OK;
 }

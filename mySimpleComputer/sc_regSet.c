@@ -14,11 +14,11 @@ int sc_regSet(int registerflag, int value)
     if (value == 1)
     {
         flags |= registerflag;
-        return SUCCESS;
+        return OK;
     }
     else
     {
         flags &= ~registerflag;
-        return SUCCESS;
+        return OK;
     }
 }

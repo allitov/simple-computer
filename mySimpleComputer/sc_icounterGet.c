@@ -8,5 +8,5 @@ int sc_icounterGet(int *value)
     if (value == NULL) return ERROR;
     *value = icounter;
 
-    return SUCCESS;
+    return OK;
 }

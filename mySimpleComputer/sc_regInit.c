@@ -6,5 +6,5 @@ extern int flags;
 int sc_regInit(void)
 {
     flags = 0;
-    return SUCCESS;
+    return OK;
 }

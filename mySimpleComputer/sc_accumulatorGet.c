@@ -12,5 +12,5 @@ int sc_accumulatorGet(int *value)
 
     *value = accumulator;
 
-    return SUCCESS;
+    return OK;
 }
