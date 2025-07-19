@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
 #include "../mySimpleComputer/sc_constants.h"
-#include "./console.h"
 #include "../mySimpleComputer/sc_variables.h"
+#include "./console.h"
 
 int main(void)
 {
