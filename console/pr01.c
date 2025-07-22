@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
+#include "../include/myTerm.h"
 #include "../mySimpleComputer/sc_constants.h"
 #include "../mySimpleComputer/sc_variables.h"
 #include "./console.h"
@@ -159,6 +160,24 @@ int main(void)
     a = sc_icounterGet(NULL);
     printf("func returns: %d\nvalue(dec): %d\n", a, value);
     printCounters();
+
+    // Example usage:
+
+    // Clear the screen (optional, but good for starting fresh)
+    // printf("\033[2J"); // ANSI escape code to clear screen
+    mt_clrscr();
+    printf("\033[H");  // ANSI escape code to move cursor to home position (1,1)
+    fflush(stdout);
+
+    mt_gotoXY(2, 1); // Move cursor to row 5, column 10
+    printf("Hello from (5,10)!");
+
+    mt_gotoXY(10, 5); // Move cursor to row 10, column 5
+    printf("Another message at (10,5).");
+
+    mt_gotoXY(1, 1); // Move cursor back to the top-left for a clean exit
+    printf("Press Enter to exit...");
+    getchar(); // Wait for user input
 
     return 0;
 }

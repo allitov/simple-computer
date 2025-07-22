@@ -39,4 +39,5 @@ add_executable(simple_computer
         console/printCounters.c
         include/myTerm.h
         myTerm/mt_clrscr.c
-        include/constants.h)
+        include/constants.h
+        myTerm/mt_gotoXY.c)
