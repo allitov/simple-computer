@@ -1,5 +1,6 @@
 #ifndef ENUMS_H
 #define ENUMS_H
+
 enum colors
 {
     RED = 1,

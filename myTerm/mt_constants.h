@@ -1,4 +1,3 @@
-
 #ifndef MT_CONSTANTS_H
 #define MT_CONSTANTS_H
 #define MAX_COLOR 7

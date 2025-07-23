@@ -14,7 +14,7 @@ void printCell(int address, enum colors fg, enum colors bg)
         {
             if (fg >= MIN_COLOR && fg <= MAX_COLOR)
             {
-                mt_gotoXY(2 + address/10, 2 + address%10); //доделать в буд версиях
+                mt_gotoXY(2 + address / 10, 2 + address % 10); //доделать в буд версиях
                 mt_setbgcolor(bg);
                 mt_setfgcolor(fg);
                 printf("%d", RAM[address]);
