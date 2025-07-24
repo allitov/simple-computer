@@ -10,5 +10,5 @@ void printHex(int value);
 void printFlags(void);
 void printAccumulator(void);
 void printCounters(void);
-void printCell (int address, enum colors fg, enum colors bg);
+void printCell(int address, enum colors fg, enum colors bg);
 #endif // CONSOLE_H
