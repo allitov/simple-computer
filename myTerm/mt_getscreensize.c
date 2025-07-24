@@ -9,7 +9,7 @@ int mt_getscreensize(int* rows, int* cols)
 
     if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == ERROR)
     {
-        return ERROR; // Ошибка при получении размера экрана
+        return ERROR;
     }
 
     *rows = ws.ws_row;
@@ -17,8 +17,8 @@ int mt_getscreensize(int* rows, int* cols)
 
     if (*rows <= 0 || *cols <= 0)
     {
-        return ERROR; // Некорректные размеры
+        return ERROR;
     }
 
-    return OK; // Успешное выполнение
+    return OK;
 }
