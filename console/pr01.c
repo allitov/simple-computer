@@ -173,12 +173,12 @@ int main(void)
     // printf("Press Enter to exit...");
     // getchar();
     sc_memoryInit();
-    sc_memorySet(0,10);
-    sc_memorySet(5,9);
-    printCell(0,VIOLET, WHITE);
-    printCell(2,RED, WHITE);
-    printCell(5,GREEN, WHITE);
-    printCell(16,GREEN, WHITE);
+    sc_memorySet(0, 10);
+    sc_memorySet(5, 9);
+    printCell(0, VIOLET, WHITE);
+    printCell(2, RED, WHITE);
+    printCell(5, GREEN, WHITE);
+    printCell(16, GREEN, WHITE);
 
     return 0;
 }
