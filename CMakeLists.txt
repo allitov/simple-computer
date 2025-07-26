@@ -40,6 +40,10 @@ add_executable(simple_computer
         myTerm/mt_clrscr.c
         include/constants.h
         myTerm/mt_gotoXY.c
+        myTerm/mt_getscreensize.c
+        myTerm/mt_setfgcolor.c
+        myTerm/mt_setbgcolor.c
         console/console.c
         console/printCommand.c
+        include/enums.h
         myTerm/mt_constants.h)
