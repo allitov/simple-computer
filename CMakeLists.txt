@@ -41,4 +41,5 @@ add_executable(simple_computer
         include/constants.h
         myTerm/mt_gotoXY.c
         console/console.c
-        console/printCommand.c)
+        console/printCommand.c
+        myTerm/mt_constants.h)
