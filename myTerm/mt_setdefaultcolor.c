@@ -4,8 +4,7 @@
 #include "../include/constants.h"
 #include "../include/enums.h"
 
-int mt_setdefaultcolor(void)
-{
+int mt_setdefaultcolor(void) {
     printf(DEFAULT_COLOR_PREF);
     return OK;
 }

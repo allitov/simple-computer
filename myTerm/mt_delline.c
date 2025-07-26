@@ -4,8 +4,7 @@
 #include "../include/constants.h"
 #include "../include/enums.h"
 
-int mt_delline(void)
-{
+int mt_delline(void) {
     printf(DELLINE_PREF);
     return OK;
 }
