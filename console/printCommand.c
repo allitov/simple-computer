@@ -23,7 +23,9 @@ void printCommand(void)
         return;
     }
 
-    int sign, command, operand;
+    int sign = 0;
+    int command = 0;
+    int operand = 0;
     int isCommandInvalid = 0;
     result = sc_commandDecode(cellValue, &sign, &command, &operand);
     if (result == ERROR)
@@ -31,6 +33,6 @@ void printCommand(void)
         isCommandInvalid = 1;
     }
 
-    printf("%c %c %02X : %02X", isCommandInvalid ? '!' : '', sign ? '-' : '+', command, operand);
+    printf("%c %c %02X : %02X", isCommandInvalid ? '!' : ' ', sign ? '-' : '+', command, operand);
     fflush(stdout);
 }
