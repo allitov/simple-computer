@@ -4,6 +4,7 @@
 #include "../mySimpleComputer/sc_constants.h"
 #include "../mySimpleComputer/sc_variables.h"
 #include "./console.h"
+#include "../include/enums.h"
 
 int main(void)
 {
