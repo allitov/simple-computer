@@ -4,4 +4,8 @@
 #define MIN_COLOR 0
 #define BGCOLOR_PREF "\033[4%dm"
 #define FGCOLOR_PREF "\033[3%dm"
+#define DEFAULT_COLOR_PREF "\033[39;49m"
+#define CURSOR_INVISIBLE_PREF "\033[?25l"
+#define CURSOR_VISIBLE_PREF "\033[?25h"
+#define DELLINE_PREF "\033[1K"
 #endif //MT_CONSTANTS_H

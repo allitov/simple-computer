@@ -46,4 +46,7 @@ add_executable(simple_computer
         myTerm/mt_setbgcolor.c
         include/enums.h
         myTerm/mt_constants.h
+        myTerm/mt_setdefaultcolor.c
+        myTerm/mt_setcursorvisible.c
+        myTerm/mt_delline.c
 )

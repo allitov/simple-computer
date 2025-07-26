@@ -180,5 +180,12 @@ int main(void)
     printCell(5, GREEN, WHITE);
     printCell(16, GREEN, WHITE);
 
+    mt_setdefaultcolor();
+    mt_setcursorvisible(1);
+    mt_delline();
+
+    printAccumulator();
+    printFlags();
+    printCounters();
     return 0;
 }
