@@ -1,24 +1,19 @@
+#include "../include/constants.h"
 #include "../include/mySimpleComputer.h"
 #include "./sc_constants.h"
 
 extern int flags;
 
-int sc_regSet(int registerflag, int value)
+int sc_regSet(const int registerFlag, const int value)
 {
-    if (registerflag != FLAG_OPERATION_OVERFLOW && registerflag != FLAG_DIVISION_BY_ZERO &&
-        registerflag != FLAG_MEMORY_OVERFLOW && registerflag != FLAG_INVALID_COMMAND &&
-        registerflag != FLAG_IGNORE_CLOCK)
+    if (registerFlag != FLAG_OPERATION_OVERFLOW && registerFlag != FLAG_DIVISION_BY_ZERO &&
+        registerFlag != FLAG_MEMORY_OVERFLOW && registerFlag != FLAG_INVALID_COMMAND &&
+        registerFlag != FLAG_IGNORE_CLOCK)
     {
         return ERROR;
     }
-    if (value == 1)
-    {
-        flags |= registerflag;
-        return OK;
-    }
-    else
-    {
-        flags &= ~registerflag;
-        return OK;
-    }
+
+    flags = value == 1 ? flags | registerFlag : flags & ~registerFlag;
+
+    return OK;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
 #include "./console.h"
+
 void printAccumulator(void)
 {
     int value;

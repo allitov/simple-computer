@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include "../include/constants.h"
 #include "../include/mySimpleComputer.h"
 #include "./sc_constants.h"
 #include "sc_variables.h"
 
-int sc_memoryLoad(char *filename)
+int sc_memoryLoad(const char *filename)
 {
     if (filename == NULL)
     {
@@ -17,12 +18,13 @@ int sc_memoryLoad(char *filename)
         return ERROR;
     }
 
-    size_t res = fread(RAM, sizeof(int), RAM_SIZE, file);
+    const size_t res = fread(RAM, sizeof(int), RAM_SIZE, file);
 
     fclose(file);
     if (res != RAM_SIZE)
     {
         return ERROR;
     }
+
     return OK;
 }

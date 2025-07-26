@@ -1,5 +1,5 @@
+#include "../include/constants.h"
 #include "../include/mySimpleComputer.h"
-#include "./sc_constants.h"
 #include "sc_commands.h"
 
 int sc_commandValidate(const int command)

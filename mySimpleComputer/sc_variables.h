@@ -5,4 +5,5 @@ extern int RAM[];
 extern int flags;
 extern int accumulator;
 extern int icounter;
+
 #endif // SC_VARIABLES_H
