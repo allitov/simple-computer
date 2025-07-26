@@ -9,7 +9,7 @@ int mt_gotoXY(const int x, const int y)
         return ERROR;
     }
 
-    printf("\033[%d;%dH", x, y);
+    printf("\033[%d;%dH", y, x);
     fflush(stdout);
 
     return OK;
