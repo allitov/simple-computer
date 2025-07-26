@@ -12,4 +12,5 @@ enum colors
     SKY_BLUE = 6,
     WHITE = 7
 };
-#endif //ENUMS_H
+
+#endif // ENUMS_H

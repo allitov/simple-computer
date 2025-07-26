@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include <unistd.h>
+#include "../include/enums.h"
+#include "../include/myTerm.h"
 #include "../mySimpleComputer/sc_constants.h"
 #include "../mySimpleComputer/sc_variables.h"
 #include "../myTerm/mt_constants.h"
-#include "../include/myTerm.h"
-#include "../include/enums.h"
 
 void printCell(int address, enum colors fg, enum colors bg)
 {
@@ -23,7 +22,8 @@ void printCell(int address, enum colors fg, enum colors bg)
         printf("ERROR. Invalid FG color\n");
         return;
     }
-    mt_gotoXY(2 + address / 10, 2 + address % 10); //доделать в буд версиях
+    // TODO: доделать в будущих версиях
+    mt_gotoXY(2 + address / 10, 2 + address % 10);
     mt_setbgcolor(bg);
     mt_setfgcolor(fg);
     printf("%d", RAM[address]);
