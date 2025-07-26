@@ -1,6 +1,8 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
+#include "../include/enums.h"
+
 // command printing
 void printDecodedCommand(int value);
 void printDec(int value);
