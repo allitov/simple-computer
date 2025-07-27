@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "../include/myTerm.h"
-#include "./console.h"
 #include "../mySimpleComputer/sc_constants.h"
+#include "./console.h"
 
 extern int flags;
 
