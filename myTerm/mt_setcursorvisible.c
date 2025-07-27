@@ -5,11 +5,16 @@
 
 int mt_setcursorvisible(int value)
 {
-    if (value == 1) {
+    if (value == 1)
+    {
         printf(CURSOR_VISIBLE_PREF);
-    } else if (value == 0) {
+    }
+    else if (value == 0)
+    {
         printf(CURSOR_INVISIBLE_PREF);
-    } else {
+    }
+    else
+    {
         return ERROR;
     }
     return OK;
