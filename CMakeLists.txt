@@ -15,7 +15,6 @@ add_executable(simple_computer
         include/mySimpleComputer.h
         mySimpleComputer/sc_commands.h
         mySimpleComputer/sc_constants.h
-        console/pr01.c
         console/printDecodedCommand.c
         console/console.h
         console/printDec.c
