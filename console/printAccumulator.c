@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
-#include "./console.h"
 #include "../include/myTerm.h"
+#include "./console.h"
 
 void printAccumulator(void) {
     mt_gotoXY(7, 4);

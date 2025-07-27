@@ -1,11 +1,12 @@
 #include <stdio.h>
-#include "./console.h"
 #include "../include/myTerm.h"
+#include "./console.h"
 #include "../mySimpleComputer/sc_constants.h"
 
 extern int flags;
 
-void printFlags(void) {
+void printFlags(void)
+{
     mt_gotoXY(1, 3);
     printf("flags: %c %c %c %c %c\n", (flags & FLAG_OPERATION_OVERFLOW) ? 'P' : '_',
            (flags & FLAG_DIVISION_BY_ZERO) ? 'O' : '_', (flags & FLAG_MEMORY_OVERFLOW) ? 'M' : '_',

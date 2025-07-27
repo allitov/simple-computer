@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "../include/mySimpleComputer.h"
-#include "./console.h"
 #include "../include/myTerm.h"
+#include "./console.h"
 
-void printCounters(void) {
+void printCounters(void)
+{
     mt_gotoXY(3, 5);
     int value;
     sc_icounterGet(&value);
