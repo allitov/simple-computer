@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "mt_constants.h"
 #include "../include/myTerm.h"
 #include "../include/constants.h"
+#include "mt_constants.h"
 
 int mt_setcursorvisible(int value) {
     if (value == 1) {
