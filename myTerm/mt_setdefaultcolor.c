@@ -3,7 +3,8 @@
 #include "../include/myTerm.h"
 #include "mt_constants.h"
 
-int mt_setdefaultcolor(void) {
+int mt_setdefaultcolor(void)
+{
     printf(DEFAULT_COLOR_PREF);
     return OK;
 }
