@@ -1,7 +1,7 @@
-#include "../include/myTerm.h"
 #include <sys/ioctl.h>
 #include <unistd.h>
 #include "../include/constants.h"
+#include "../include/myTerm.h"
 
 int mt_getscreensize(int* rows, int* cols)
 {

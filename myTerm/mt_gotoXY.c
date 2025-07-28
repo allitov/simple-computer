@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../include/constants.h"
 #include "../include/myTerm.h"
+#include "./mt_constants.h"
 
 int mt_gotoXY(const int x, const int y)
 {
@@ -9,7 +10,7 @@ int mt_gotoXY(const int x, const int y)
         return ERROR;
     }
 
-    printf("\033[%d;%dH", x, y);
+    printf(GOTO_YX, y, x);
     fflush(stdout);
 
     return OK;

@@ -16,4 +16,5 @@ void printBin(const int value)
             printf("0");
         }
     }
+    fflush(stdout);
 }
