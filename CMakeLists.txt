@@ -43,6 +43,9 @@ add_executable(simple_computer
         myTerm/mt_getscreensize.c
         myTerm/mt_setfgcolor.c
         myTerm/mt_setbgcolor.c
+        myTerm/mt_setdefaultcolor.c
+        myTerm/mt_setcursorvisible.c
+        myTerm/mt_delline.c
         console/console.c
         console/printCommand.c
         include/enums.h
