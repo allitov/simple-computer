@@ -20,8 +20,7 @@ int main()
     bc_setbigcharpos(big, 7, 7, 1);
     int value;
     bc_getbigcharpos(big, 0, 0, &value);
-    printf("Bit at (0,0): %d\n", value);
-    printf("\033[2J");
+    printf("\n");
     bc_printbigchar(big, 5, 10, RED, WHITE);
 
 
