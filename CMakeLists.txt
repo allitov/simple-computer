@@ -49,4 +49,7 @@ add_executable(simple_computer
         console/console.c
         console/printCommand.c
         include/enums.h
-        myTerm/mt_constants.h)
+        myTerm/mt_constants.h
+        myBigChars/bc_bigcharwrite.cpp
+        myBigChars/bc_bigcharread.cpp
+        include/myBigChars.h)
