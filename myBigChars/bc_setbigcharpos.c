@@ -5,7 +5,7 @@
 #include "../include/constants.h"
 
 int bc_setbigcharpos(int *big, int x, int y, int value) {
-    if (x < 0 || x >= 7 || y < 0 || y >= 7) return ERROR;
+    if (x < 0 || x > 7 || y < 0 || y > 7) return ERROR;
     if (value != 0 && value != 1) return ERROR;
 
     int index = x / 4;
