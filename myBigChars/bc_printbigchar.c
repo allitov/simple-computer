@@ -5,8 +5,10 @@
 #include "../include/myTerm.h"
 #include "../include/myBigChars.h"
 
-int bc_printbigchar(int big[2], int x, int y, enum colors fg, enum colors bg) {
-    if (x < 1 || y < 1) {
+int bc_printbigchar(int big[2], int x_pos, int y_pos, enum colors fg, enum colors bg)
+{
+    if (x_pos < 1 || y_pos < 1)
+    {
         return ERROR;
     }
 
@@ -19,7 +21,7 @@ int bc_printbigchar(int big[2], int x, int y, enum colors fg, enum colors bg) {
         {
             int value;
             bc_getbigcharpos(big, x, y, &value);
-            printf("\033[%d;%dH", x + x, y + y);
+            printf("\033[%d;%dH", x_pos + x, y_pos + y);
             bc_printA(value ? "a" : " ");
         }
     }
