@@ -53,4 +53,7 @@ add_executable(simple_computer
         include/myBigChars.h
         myBigChars/bc_setbigcharpos.c
         myBigChars/bc_getbigcharpos.c
-        myBigChars/bc_printbigchar.c)
+        myBigChars/bc_printbigchar.c
+        myBigChars/bc_strlen.c
+        myBigChars/bc_printA.c
+        myBigChars/bc_box.c)

@@ -9,20 +9,13 @@
 
 int main()
 {
+    bc_box(2, 2, 80, 80, WHITE, VIOLET, "TFFFF", WHITE, VIOLET);
     int big[2] = {0};
     bc_setbigcharpos(big, 0, 0, 1);
-    bc_setbigcharpos(big, 1, 1, 1);
-    bc_setbigcharpos(big, 2, 2, 1);
-    bc_setbigcharpos(big, 3, 3, 1);
-    bc_setbigcharpos(big, 4, 4, 1);
-    bc_setbigcharpos(big, 5, 5, 1);
-    bc_setbigcharpos(big, 6, 6, 1);
-    bc_setbigcharpos(big, 7, 7, 1);
     int value;
     bc_getbigcharpos(big, 0, 0, &value);
-    printf("\n");
-    bc_printbigchar(big, 5, 10, RED, WHITE);
-
+    printf("%d\n", value);
+    //  bc_printbigchar(big, 10, 10, RED, WHITE);
 
     return OK;
 }
